@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anish Safui — Industry Consultant</title>
+  <meta name="description" content="Anish Safui — Industry Consultant &amp; Senior Developer at IBM Corporation. UNIX / IBM DB2 SME with 13+ years architecting mission-critical financial systems.">
+  <link rel="icon" type="image/png" href="media/favicon.png">
+
+  <script>
+    window.PORTFOLIO_ACCENTS = {
+      blue:   { light: ['#1d4ed8', '#eef2ff', 'rgba(29, 78, 216, .35)'],  dark: ['#6d8bff', '#1a2036', 'rgba(109, 139, 255, .45)'] },
+      green:  { light: ['#16a34a', '#ecfdf3', 'rgba(22, 163, 74, .35)'],  dark: ['#4ade80', '#142a1c', 'rgba(74, 222, 128, .45)'] },
+      purple: { light: ['#7c3aed', '#f3eeff', 'rgba(124, 58, 237, .35)'], dark: ['#a78bfa', '#241f38', 'rgba(167, 139, 250, .45)'] },
+      rose:   { light: ['#e11d48', '#ffeef2', 'rgba(225, 29, 72, .35)'],  dark: ['#fb7185', '#3a1a20', 'rgba(251, 113, 133, .45)'] },
+      amber:  { light: ['#b45309', '#fff6e5', 'rgba(180, 83, 9, .35)'],   dark: ['#fbbf24', '#332608', 'rgba(251, 191, 36, .45)'] },
+      teal:   { light: ['#0d9488', '#e6fbf8', 'rgba(13, 148, 136, .35)'], dark: ['#2dd4bf', '#0f2e2b', 'rgba(45, 212, 191, .45)'] }
+    };
+    (function () {
+      try {
+        var root = document.documentElement;
+        var theme = localStorage.getItem('portfolio.theme');
+        if (theme === 'light' || theme === 'dark') root.setAttribute('data-theme', theme);
+
+        var motion = localStorage.getItem('portfolio.motion');
+        if (motion === 'on' || motion === 'reduced') root.setAttribute('data-motion', motion);
+
+        var accentId = localStorage.getItem('portfolio.accent') || 'blue';
+        if (accentId !== 'blue' && window.PORTFOLIO_ACCENTS[accentId]) {
+          var isDark = theme === 'dark' || (theme !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+          var vals = window.PORTFOLIO_ACCENTS[accentId][isDark ? 'dark' : 'light'];
+          root.style.setProperty('--accent', vals[0]);
+          root.style.setProperty('--accent-soft', vals[1]);
+          root.style.setProperty('--accent-glow', vals[2]);
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <nav class="side-nav" id="side-nav" aria-label="Section navigation">
+    <a href="#top"><span class="side-nav-label">Home</span><span class="side-nav-dot"></span></a>
+    <a href="#about"><span class="side-nav-label">About</span><span class="side-nav-dot"></span></a>
+    <a href="#skills"><span class="side-nav-label">Skills</span><span class="side-nav-dot"></span></a>
+    <a href="#experience"><span class="side-nav-label">Experience</span><span class="side-nav-dot"></span></a>
+    <a href="#projects"><span class="side-nav-label">Projects</span><span class="side-nav-dot"></span></a>
+    <a href="#education"><span class="side-nav-label">Education</span><span class="side-nav-dot"></span></a>
+    <a href="#contact"><span class="side-nav-label">Contact</span><span class="side-nav-dot"></span></a>
+  </nav>
+
+  <button class="settings-btn" id="settingsBtn" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="settingsModal" title="Settings" aria-label="Settings">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+      <circle cx="12" cy="12" r="3"/>
+      <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+    </svg>
+  </button>
+
+  <div class="modal-overlay" id="settingsOverlay" hidden>
+    <div class="modal" id="settingsModal" role="dialog" aria-modal="true" aria-labelledby="settingsTitle">
+      <div class="modal-head">
+        <h3 id="settingsTitle">Settings</h3>
+        <button class="modal-close" id="settingsClose" type="button" aria-label="Close settings">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 5l14 14M19 5 5 19"/></svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="settings-group">
+          <span class="settings-label">Appearance</span>
+          <div class="theme-toggle" role="group" aria-label="Theme">
+            <button type="button" data-theme-choice="light">Light</button>
+            <button type="button" data-theme-choice="dark">Dark</button>
+            <button type="button" data-theme-choice="system">System</button>
+          </div>
+        </div>
+        <div class="settings-group">
+          <span class="settings-label">Accent Color</span>
+          <div class="accent-swatches" role="group" aria-label="Accent color">
+            <button type="button" class="accent-swatch" data-accent-choice="blue" style="--swatch: #1d4ed8" aria-label="Blue"></button>
+            <button type="button" class="accent-swatch" data-accent-choice="green" style="--swatch: #16a34a" aria-label="Green"></button>
+            <button type="button" class="accent-swatch" data-accent-choice="purple" style="--swatch: #7c3aed" aria-label="Purple"></button>
+            <button type="button" class="accent-swatch" data-accent-choice="rose" style="--swatch: #e11d48" aria-label="Rose"></button>
+            <button type="button" class="accent-swatch" data-accent-choice="amber" style="--swatch: #b45309" aria-label="Amber"></button>
+            <button type="button" class="accent-swatch" data-accent-choice="teal" style="--swatch: #0d9488" aria-label="Teal"></button>
+          </div>
+        </div>
+        <div class="settings-group">
+          <span class="settings-label">Motion</span>
+          <div class="theme-toggle" role="group" aria-label="Motion">
+            <button type="button" data-motion-choice="on">On</button>
+            <button type="button" data-motion-choice="reduced">Reduced</button>
+            <button type="button" data-motion-choice="system">System</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <section class="hero" id="top">
+      <canvas class="hero-canvas" id="hero-canvas" aria-hidden="true"></canvas>
+      <div class="hero-scrim" aria-hidden="true"></div>
+      <div class="wrap hero-inner">
+        <p class="eyebrow reveal">Industry Consultant · IBM Corporation</p>
+        <h1 class="hero-name" aria-label="Anish Safui">Anish Safui</h1>
+        <p class="hero-lede reveal">
+          13+ years architecting mission-critical financial systems in retirement and insurance —
+          leading platform migrations, modernizing legacy architectures, and championing
+          AI-augmented engineering along the way.
+        </p>
+        <div class="hero-actions reveal">
+          <a class="btn btn-primary" href="#about">Know more</a>
+          <a class="btn btn-ghost" href="#contact">Get in Touch</a>
+        </div>
+        <div class="hero-social reveal">
+          <a href="https://github.com/isafuianish-dev" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.73.5.75 5.48.75 11.75c0 5.02 3.26 9.28 7.78 10.78.57.1.78-.25.78-.55 0-.27-.01-1.17-.02-2.12-3.17.69-3.84-1.35-3.84-1.35-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.24.72-1.53-2.53-.29-5.19-1.27-5.19-5.64 0-1.25.44-2.27 1.18-3.07-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.24 2.76.12 3.05.74.8 1.18 1.82 1.18 3.07 0 4.38-2.67 5.34-5.21 5.63.41.36.77 1.06.77 2.14 0 1.55-.01 2.79-.01 3.17 0 .3.2.66.79.55A11.26 11.26 0 0 0 23.25 11.75C23.25 5.48 18.27.5 12 .5Z"/></svg>
+          </a>
+          <a href="mailto:isafuianish.dev@outlook.com" aria-label="Send an email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3.5 6 8.5 7 8.5-7"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="wrap">
+        <h2 class="section-title reveal"><span class="section-num">01</span>About</h2>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>
+              I'm a <strong>Senior Developer and Industry Consultant at IBM Corporation</strong> with
+              <strong>13+ years</strong> delivering mission-critical systems for <strong>Prudential
+              Financial</strong> in retirement and insurance. I serve as the <strong>UNIX and IBM DB2
+              Subject Matter Expert</strong> — a role built on deep, hands-on ownership of complex
+              enterprise platforms.
+            </p>
+            <p>
+              Today I architect solutions for the <strong>Disability Claim Management System
+              (DCMS)</strong>, including a <strong>CQRS read-replica framework</strong> that improves
+              read performance and enables independent scaling of query workloads, and the
+              modularization of a legacy monolith into scalable, fault-isolated service components. I
+              also modernized the DCMS communications layer — integrating <strong>SMS and email
+              notifications via Kong-enabled REST APIs</strong> with async callback support, replacing
+              legacy batch-based correspondence. I serve as the platform SME for an <strong>AIX and
+              IBM DB2 upgrade</strong> — owning end-to-end planning, solution design, test strategy,
+              and change management across all affected systems.
+            </p>
+            <p>
+              I was the <strong>SME for Prudential's VISION OmniPlus (Omni)</strong> application, where
+              I led its full <strong>end-to-end migration from IBM Mainframe (JCL, COBOL, VSAM) to AIX
+              UNIX</strong> — one of the most complex platform transitions in the retirement domain.
+              That engagement covered the full migration lifecycle — data extraction, cross-platform
+              migration, and compliance reporting — while managing a batch cycle
+              spanning <strong>20+ upstream and downstream systems</strong> with daily, weekly,
+              monthly, quarterly, and annual processing runs. I also automated day-to-day operations
+              using <strong>Python, Shell scripting, and Excel VBA</strong>, and delivered
+              enterprise-wide Knowledge Transfer sessions published on <strong>IBM Lighthouse</strong>.
+            </p>
+            <p>
+              Outside of client work, I build <strong>developer productivity tools</strong> — web apps,
+              VS Code extensions, and CLI utilities — to automate the repetitive parts of daily
+              engineering work. Beyond delivery, I champion <strong>AI-augmented engineering</strong>
+              through IBM's Innovation Council, integrating tools like <strong>Claude and GitHub
+              Copilot</strong> to accelerate developer productivity. I hold certifications in
+              <strong>AWS (Developer &amp; AI Practitioner)</strong>, <strong>IBM Generative &amp; Agentic
+              AI</strong>, and <strong>Python (PCAP)</strong>.
+            </p>
+            <a class="btn btn-primary" href="https://isafuianish-dev.github.io/webapp_cdnBuddy/media/Anish%20Safui_2026.pdf" download="Anish_Safui_Resume.pdf">Download Resume</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="skills">
+      <div class="wrap">
+        <h2 class="section-title reveal"><span class="section-num">02</span>Skills</h2>
+        <div class="skills-marquee">
+        <div class="skills-track">
+          <div class="skill-card reveal">
+            <h3>Languages</h3>
+            <ul class="tag-list">
+              <li>Python</li><li>COBOL</li><li>JavaScript</li><li>KSH Shell</li>
+              <li>SQL PL</li><li>AWK</li><li>Perl</li><li>VBA</li>
+            </ul>
+          </div>
+          <div class="skill-card reveal">
+            <h3>Databases</h3>
+            <ul class="tag-list">
+              <li>IBM DB2</li><li>DB2 Stored Procedures</li><li>VSAM</li>
+            </ul>
+          </div>
+          <div class="skill-card reveal">
+            <h3>Cloud &amp; DevOps</h3>
+            <ul class="tag-list">
+              <li>AWS Lambda</li><li>AWS Glue</li><li>AWS S3</li><li>AWS CloudWatch</li>
+              <li>Jenkins CI/CD</li><li>GitHub Workflows</li><li>Ansible</li>
+              <li>HashiCorp Vault</li><li>Autosys</li><li>Kong API Gateway</li><li>Apigee</li>
+            </ul>
+          </div>
+          <div class="skill-card reveal">
+            <h3>AI &amp; LLM Tooling</h3>
+            <ul class="tag-list">
+              <li>Claude (Anthropic)</li><li>GitHub Copilot</li><li>Generative AI</li>
+              <li>Agentic AI</li><li>Prompt Engineering</li>
+            </ul>
+          </div>
+          <div class="skill-card reveal">
+            <h3>Platforms &amp; OS</h3>
+            <ul class="tag-list">
+              <li>AIX UNIX</li><li>IBM z/OS</li><li>Linux</li><li>Windows Server</li>
+            </ul>
+          </div>
+          <div class="skill-card reveal">
+            <h3>Architecture</h3>
+            <ul class="tag-list">
+              <li>CQRS</li><li>Read Replica Design</li><li>Microservices</li>
+              <li>Mainframe-to-UNIX Migration</li><li>Monolith Modularization</li><li>Fault Isolation</li>
+            </ul>
+          </div>
+          <div class="skill-card reveal">
+            <h3>Mainframe</h3>
+            <ul class="tag-list">
+              <li>JCL</li><li>TSO/ISPF</li><li>Changeman</li><li>FileAId</li><li>Microfocus</li>
+            </ul>
+          </div>
+          <div class="skill-card reveal">
+            <h3>Tools</h3>
+            <ul class="tag-list">
+              <li>Git</li><li>Bitbucket</li><li>Splunk</li><li>Postman</li><li>Jira</li>
+              <li>ServiceNow</li><li>Excel VBA</li>
+            </ul>
+          </div>
+          <div class="skills-track-dup" aria-hidden="true">
+          <div class="skill-card" aria-hidden="true">
+            <h3>Languages</h3>
+            <ul class="tag-list">
+              <li>Python</li><li>COBOL</li><li>JavaScript</li><li>KSH Shell</li>
+              <li>SQL PL</li><li>AWK</li><li>Perl</li><li>VBA</li>
+            </ul>
+          </div>
+          <div class="skill-card" aria-hidden="true">
+            <h3>Databases</h3>
+            <ul class="tag-list">
+              <li>IBM DB2</li><li>DB2 Stored Procedures</li><li>VSAM</li>
+            </ul>
+          </div>
+          <div class="skill-card" aria-hidden="true">
+            <h3>Cloud &amp; DevOps</h3>
+            <ul class="tag-list">
+              <li>AWS Lambda</li><li>AWS Glue</li><li>AWS S3</li><li>AWS CloudWatch</li>
+              <li>Jenkins CI/CD</li><li>GitHub Workflows</li><li>Ansible</li>
+              <li>HashiCorp Vault</li><li>Autosys</li><li>Kong API Gateway</li><li>Apigee</li>
+            </ul>
+          </div>
+          <div class="skill-card" aria-hidden="true">
+            <h3>AI &amp; LLM Tooling</h3>
+            <ul class="tag-list">
+              <li>Claude (Anthropic)</li><li>GitHub Copilot</li><li>Generative AI</li>
+              <li>Agentic AI</li><li>Prompt Engineering</li>
+            </ul>
+          </div>
+          <div class="skill-card" aria-hidden="true">
+            <h3>Platforms &amp; OS</h3>
+            <ul class="tag-list">
+              <li>AIX UNIX</li><li>IBM z/OS</li><li>Linux</li><li>Windows Server</li>
+            </ul>
+          </div>
+          <div class="skill-card" aria-hidden="true">
+            <h3>Architecture</h3>
+            <ul class="tag-list">
+              <li>CQRS</li><li>Read Replica Design</li><li>Microservices</li>
+              <li>Mainframe-to-UNIX Migration</li><li>Monolith Modularization</li><li>Fault Isolation</li>
+            </ul>
+          </div>
+          <div class="skill-card" aria-hidden="true">
+            <h3>Mainframe</h3>
+            <ul class="tag-list">
+              <li>JCL</li><li>TSO/ISPF</li><li>Changeman</li><li>FileAId</li><li>Microfocus</li>
+            </ul>
+          </div>
+          <div class="skill-card" aria-hidden="true">
+            <h3>Tools</h3>
+            <ul class="tag-list">
+              <li>Git</li><li>Bitbucket</li><li>Splunk</li><li>Postman</li><li>Jira</li>
+              <li>ServiceNow</li><li>Excel VBA</li>
+            </ul>
+          </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="wrap">
+        <h2 class="section-title reveal"><span class="section-num">03</span>Experience</h2>
+        <div class="timeline">
+
+          <article class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-head">
+                <h3>Senior Developer / Tech Lead</h3>
+                <span class="timeline-date">Jul 2024 — Present</span>
+              </div>
+              <p class="timeline-org">IBM Corporation (+ IBM India Pvt Ltd) · Prudential Financial, Edison NJ</p>
+              <p class="timeline-context">Disability Claim Management System (DCMS)</p>
+              <ul>
+                <li>Architected and implemented the DCMS Read Replica using a Command Query Responsibility Segregation (CQRS) pattern, significantly improving read performance and enabling independent scaling of query workloads.</li>
+                <li>Led a modularization initiative to transform the monolithic DCMS architecture into AWS service-based components, improving scalability, maintainability, and fault isolation.</li>
+                <li>Designed and delivered a next-generation communications solution for DCMS using Kong-secured REST APIs for SMS and email delivery, transforming legacy batch communications into a scalable, API-driven architecture with enhanced security, observability, and operational efficiency.</li>
+                <li>Designed and developed complex DB2 stored procedures (SQL PL) and UNIX process frameworks orchestrating multiple backend technologies — KornShell (KSH), Python, AWK, and Perl — with a VB.NET front end.</li>
+                <li>Drove CI/CD adoption using Jenkins, Bitbucket, and GitHub Actions; introduced HashiCorp Vault for secrets management and Ansible for infrastructure automation.</li>
+                <li>Drove operational automation initiatives using Python, Shell Scripting (KSH), Excel VBA, and batch scripting, reducing manual effort and improving monitoring, reporting accuracy, and team productivity.</li>
+                <li>Served as the primary liaison between business stakeholders and development teams, leading code walkthroughs, design reviews, and translation of business requirements into technical specifications.</li>
+                <li>Created and published technical innovations, best practices, and productivity accelerators on IBM Lighthouse, IBM's enterprise-wide knowledge-sharing platform.</li>
+                <li>Developed reusable automation frameworks and support utilities to streamline production support, incident resolution, deployment activities, and routine operational tasks.</li>
+                <li>Mentored team members and facilitated knowledge-sharing sessions, contributing to improved onboarding, technical excellence, and long-term platform sustainability.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-head">
+                <h3>Industry Consultant / SME</h3>
+                <span class="timeline-date">Jun 2018 — Jun 2024</span>
+              </div>
+              <p class="timeline-org">IBM Corporation (+ IBM India Pvt Ltd) · Prudential Financial</p>
+              <p class="timeline-context">Retirement — VISION OMNI (FIS OmniPlus Record Keeping System)</p>
+              <ul>
+                <li>Led the end-to-end migration of Prudential's mission-critical VISION OmniPlus retirement recordkeeping platform from a legacy IBM Mainframe environment (JCL, COBOL, VSAM) to AIX UNIX (KornShell, IBM DB2, Python), ensuring business continuity, data integrity, and regulatory compliance throughout the transition.</li>
+                <li>Served as a key technical lead across multiple workstreams, designing and developing client-facing and peripheral applications that enhanced operational efficiency and integrated with core retirement processing systems.</li>
+                <li>Architected, developed, and supported complex batch-processing ecosystems spanning 20+ upstream and downstream applications, managing daily, weekly, monthly, quarterly, and annual processing cycles while ensuring high availability and strict SLA compliance.</li>
+                <li>Drove operational automation initiatives using Python, Shell Scripting (KSH), Excel VBA, and batch scripting, reducing manual effort and improving monitoring and reporting accuracy.</li>
+                <li>Represented the application team during internal and external audits, ensuring adherence to governance, security, compliance, and operational controls.</li>
+                <li>Provided production support and root-cause analysis for critical business processes, proactively identifying system improvements to enhance stability, performance, and maintainability.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-head">
+                <h3>Senior Developer / Team Lead</h3>
+                <span class="timeline-date">Jan 2015 — Jun 2018</span>
+              </div>
+              <p class="timeline-org">Cognizant Technology Solutions · MassMutual Financial</p>
+
+              <div class="timeline-head">
+                <h3>Developer / Trainee</h3>
+                <span class="timeline-date">Mar 2013 — Dec 2014</span>
+              </div>
+              <p class="timeline-org">Cognizant Technology Solutions · Hartford Financial</p>
+
+              <p class="timeline-context">Retirement — Omni/Output Support &amp; Maintenance. MassMutual Financial acquired the Retirement business from Hartford Financial — I continued on the same project for both clients.</p>
+              <ul>
+                <li>Led UNIX and Mainframe production support operations, managing job abends, batch processing failures, incident triage, root-cause analysis, and permanent corrective actions across L1 and L2 support queues.</li>
+                <li>Monitored and supported complex enterprise batch environments, proactively identifying performance bottlenecks and collaborating with infrastructure, database, and application teams to minimize production downtime.</li>
+                <li>Managed the full incident and problem management lifecycle through ServiceNow, ensuring timely resolution, SLA compliance, accurate documentation, and effective stakeholder communication.</li>
+                <li>Coordinated change management, release planning, and production deployments, performing impact assessments and validating implementation plans.</li>
+                <li>Prepared and presented weekly and monthly operational dashboards, service metrics, and executive status reports for clients and leadership.</li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="projects">
+      <div class="wrap">
+        <h2 class="section-title reveal"><span class="section-num">04</span>Projects</h2>
+        <p class="section-lede section-lede-full reveal">MyApps — a growing suite of single-purpose browser tools, built one at a time. Everything runs client-side with no backend and no accounts. Each one is shaped by experience gained along the way, built to automate the small, repetitive parts of my day-to-day work and life — plus a few games for quick fun, with no intrusive ads getting in the way.</p>
+        <div class="app-section reveal">
+          <section class="app-group">
+            <h3 class="app-group-title">Web Apps</h3>
+            <div class="app-grid">
+              <div class="app-tile">
+                <span class="app-tile-icon"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webapp_homePageBuddy/media/icon.svg);mask-image:url(https://isafuianish-dev.github.io/webapp_homePageBuddy/media/icon.svg);"></span></span>
+                <span class="app-tile-index">00</span>
+                <span class="app-tile-symbol">Hp</span>
+                <span class="app-tile-name">Home Page</span>
+                <span class="app-tile-expand">
+                  <span class="app-tile-expand-icon"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webapp_homePageBuddy/media/icon.svg);mask-image:url(https://isafuianish-dev.github.io/webapp_homePageBuddy/media/icon.svg);"></span></span>
+                  <span class="app-tile-fullname">Home Page Buddy</span>
+                  <span class="app-tile-desc">A minimal browser home page with search and favorites.</span>
+                  <span class="app-tile-buttons">
+                    <a class="app-tile-github" href="https://github.com/isafuianish-dev/webapp_homePageBuddy" target="_blank" rel="noopener noreferrer" aria-label="View source on GitHub"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webapp_cdnBuddy/svg/github.svg);mask-image:url(https://isafuianish-dev.github.io/webapp_cdnBuddy/svg/github.svg);"></span></a>
+                    <a class="app-tile-open" href="https://isafuianish-dev.github.io/webapp_homePageBuddy/" target="_blank" rel="noopener noreferrer">Open</a>
+                  </span>
+                </span>
+              </div>
+
+              <div class="app-tile">
+                <span class="app-tile-icon"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webapp_kanbanBuddy/media/icon.svg);mask-image:url(https://isafuianish-dev.github.io/webapp_kanbanBuddy/media/icon.svg);"></span></span>
+                <span class="app-tile-index">01</span>
+                <span class="app-tile-symbol">Kb</span>
+                <span class="app-tile-name">Kanban</span>
+                <span class="app-tile-expand">
+                  <span class="app-tile-expand-icon"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webapp_kanbanBuddy/media/icon.svg);mask-image:url(https://isafuianish-dev.github.io/webapp_kanbanBuddy/media/icon.svg);"></span></span>
+                  <span class="app-tile-fullname">Kanban Buddy</span>
+                  <span class="app-tile-desc">Drag-and-drop board for tracking work.</span>
+                  <span class="app-tile-buttons">
+                    <a class="app-tile-github" href="https://github.com/isafuianish-dev/webapp_kanbanBuddy" target="_blank" rel="noopener noreferrer" aria-label="View source on GitHub"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webapp_cdnBuddy/svg/github.svg);mask-image:url(https://isafuianish-dev.github.io/webapp_cdnBuddy/svg/github.svg);"></span></a>
+                    <a class="app-tile-open" href="https://isafuianish-dev.github.io/webapp_kanbanBuddy/" target="_blank" rel="noopener noreferrer">Open</a>
+                  </span>
+                </span>
+              </div>
+
+              <div class="app-tile">
+                <span class="app-tile-icon"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webapp_mdviewerBuddy/media/icon.svg);mask-image:url(https://isafuianish-dev.github.io/webapp_mdviewerBuddy/media/icon.svg);"></span></span>
+                <span class="app-tile-index">02</span>
+                <span class="app-tile-symbol">Md</span>
+                <span class="app-tile-name">MD Viewer</span>
+                <span class="app-tile-expand">
+                  <span class="app-tile-expand-icon"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webapp_mdviewerBuddy/media/icon.svg);mask-image:url(https://isafuianish-dev.github.io/webapp_mdviewerBuddy/media/icon.svg);"></span></span>
+                  <span class="app-tile-fullname">MD Viewer Buddy</span>
+                  <span class="app-tile-desc">Browse and read Markdown files with a table of contents.</span>
+                  <span class="app-tile-buttons">
+                    <a class="app-tile-github" href="https://github.com/isafuianish-dev/webapp_mdviewerBuddy" target="_blank" rel="noopener noreferrer" aria-label="View source on GitHub"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webapp_cdnBuddy/svg/github.svg);mask-image:url(https://isafuianish-dev.github.io/webapp_cdnBuddy/svg/github.svg);"></span></a>
+                    <a class="app-tile-open" href="https://isafuianish-dev.github.io/webapp_mdviewerBuddy/" target="_blank" rel="noopener noreferrer">Open</a>
+                  </span>
+                </span>
+              </div>
+
+              <div class="app-tile">
+                <span class="app-tile-icon"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webapp_personalExpenseBuddy/media/icon.svg);mask-image:url(https://isafuianish-dev.github.io/webapp_personalExpenseBuddy/media/icon.svg);"></span></span>
+                <span class="app-tile-index">03</span>
+                <span class="app-tile-symbol">Pe</span>
+                <span class="app-tile-name">Personal Expense</span>
+                <span class="app-tile-expand">
+                  <span class="app-tile-expand-icon"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webapp_personalExpenseBuddy/media/icon.svg);mask-image:url(https://isafuianish-dev.github.io/webapp_personalExpenseBuddy/media/icon.svg);"></span></span>
+                  <span class="app-tile-fullname">Personal Expense Buddy</span>
+                  <span class="app-tile-desc">Track personal spending by category, with charts.</span>
+                  <span class="app-tile-buttons">
+                    <a class="app-tile-github" href="https://github.com/isafuianish-dev/webapp_personalExpenseBuddy" target="_blank" rel="noopener noreferrer" aria-label="View source on GitHub"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webapp_cdnBuddy/svg/github.svg);mask-image:url(https://isafuianish-dev.github.io/webapp_cdnBuddy/svg/github.svg);"></span></a>
+                    <a class="app-tile-open" href="https://isafuianish-dev.github.io/webapp_personalExpenseBuddy/" target="_blank" rel="noopener noreferrer">Open</a>
+                  </span>
+                </span>
+              </div>
+
+              <div class="app-tile">
+                <span class="app-tile-icon"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webapp_postBuddy/media/icon.svg);mask-image:url(https://isafuianish-dev.github.io/webapp_postBuddy/media/icon.svg);"></span></span>
+                <span class="app-tile-index">04</span>
+                <span class="app-tile-symbol">Po</span>
+                <span class="app-tile-name">Post</span>
+                <span class="app-tile-expand">
+                  <span class="app-tile-expand-icon"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webapp_postBuddy/media/icon.svg);mask-image:url(https://isafuianish-dev.github.io/webapp_postBuddy/media/icon.svg);"></span></span>
+                  <span class="app-tile-fullname">Post Buddy</span>
+                  <span class="app-tile-desc">A lightweight client for sending HTTP requests.</span>
+                  <span class="app-tile-buttons">
+                    <a class="app-tile-github" href="https://github.com/isafuianish-dev/webapp_postBuddy" target="_blank" rel="noopener noreferrer" aria-label="View source on GitHub"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webapp_cdnBuddy/svg/github.svg);mask-image:url(https://isafuianish-dev.github.io/webapp_cdnBuddy/svg/github.svg);"></span></a>
+                    <a class="app-tile-open" href="https://isafuianish-dev.github.io/webapp_postBuddy/" target="_blank" rel="noopener noreferrer">Open</a>
+                  </span>
+                </span>
+              </div>
+
+              <div class="app-tile">
+                <span class="app-tile-icon"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webapp_snippetBuddy/media/icon.svg);mask-image:url(https://isafuianish-dev.github.io/webapp_snippetBuddy/media/icon.svg);"></span></span>
+                <span class="app-tile-index">05</span>
+                <span class="app-tile-symbol">Sn</span>
+                <span class="app-tile-name">Snippet</span>
+                <span class="app-tile-expand">
+                  <span class="app-tile-expand-icon"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webapp_snippetBuddy/media/icon.svg);mask-image:url(https://isafuianish-dev.github.io/webapp_snippetBuddy/media/icon.svg);"></span></span>
+                  <span class="app-tile-fullname">Snippet Buddy</span>
+                  <span class="app-tile-desc">Save and organize reusable code snippets.</span>
+                  <span class="app-tile-buttons">
+                    <a class="app-tile-github" href="https://github.com/isafuianish-dev/webapp_snippetBuddy" target="_blank" rel="noopener noreferrer" aria-label="View source on GitHub"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webapp_cdnBuddy/svg/github.svg);mask-image:url(https://isafuianish-dev.github.io/webapp_cdnBuddy/svg/github.svg);"></span></a>
+                    <a class="app-tile-open" href="https://isafuianish-dev.github.io/webapp_snippetBuddy/" target="_blank" rel="noopener noreferrer">Open</a>
+                  </span>
+                </span>
+              </div>
+
+              <div class="app-tile">
+                <span class="app-tile-icon"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webapp_tripExpenseBuddy/media/icon.svg);mask-image:url(https://isafuianish-dev.github.io/webapp_tripExpenseBuddy/media/icon.svg);"></span></span>
+                <span class="app-tile-index">06</span>
+                <span class="app-tile-symbol">Te</span>
+                <span class="app-tile-name">Trip Expense</span>
+                <span class="app-tile-expand">
+                  <span class="app-tile-expand-icon"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webapp_tripExpenseBuddy/media/icon.svg);mask-image:url(https://isafuianish-dev.github.io/webapp_tripExpenseBuddy/media/icon.svg);"></span></span>
+                  <span class="app-tile-fullname">Trip Expense Buddy</span>
+                  <span class="app-tile-desc">Split and settle shared trip expenses.</span>
+                  <span class="app-tile-buttons">
+                    <a class="app-tile-github" href="https://github.com/isafuianish-dev/webapp_tripExpenseBuddy" target="_blank" rel="noopener noreferrer" aria-label="View source on GitHub"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webapp_cdnBuddy/svg/github.svg);mask-image:url(https://isafuianish-dev.github.io/webapp_cdnBuddy/svg/github.svg);"></span></a>
+                    <a class="app-tile-open" href="https://isafuianish-dev.github.io/webapp_tripExpenseBuddy/" target="_blank" rel="noopener noreferrer">Open</a>
+                  </span>
+                </span>
+              </div>
+
+              <div class="app-tile">
+                <span class="app-tile-ribbon-clip" aria-hidden="true"><span class="app-tile-ribbon">New</span></span>
+                <span class="app-tile-icon"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webapp_calendarBuddy/media/icon.svg);mask-image:url(https://isafuianish-dev.github.io/webapp_calendarBuddy/media/icon.svg);"></span></span>
+                <span class="app-tile-index">07</span>
+                <span class="app-tile-symbol">Ca</span>
+                <span class="app-tile-name">Calendar</span>
+                <span class="app-tile-expand">
+                  <span class="app-tile-ribbon" aria-hidden="true">New</span>
+                  <span class="app-tile-expand-icon"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webapp_calendarBuddy/media/icon.svg);mask-image:url(https://isafuianish-dev.github.io/webapp_calendarBuddy/media/icon.svg);"></span></span>
+                  <span class="app-tile-fullname">Calendar Buddy</span>
+                  <span class="app-tile-desc">Plan your month and keep track of upcoming events.</span>
+                  <span class="app-tile-buttons">
+                    <a class="app-tile-github" href="https://github.com/isafuianish-dev/webapp_calendarBuddy" target="_blank" rel="noopener noreferrer" aria-label="View source on GitHub"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webapp_cdnBuddy/svg/github.svg);mask-image:url(https://isafuianish-dev.github.io/webapp_cdnBuddy/svg/github.svg);"></span></a>
+                    <a class="app-tile-open" href="https://isafuianish-dev.github.io/webapp_calendarBuddy/" target="_blank" rel="noopener noreferrer">Open</a>
+                  </span>
+                </span>
+              </div>
+
+              <div class="app-tile">
+                <span class="app-tile-icon"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webapp_todoBuddy/media/icon.svg);mask-image:url(https://isafuianish-dev.github.io/webapp_todoBuddy/media/icon.svg);"></span></span>
+                <span class="app-tile-index">08</span>
+                <span class="app-tile-symbol">Td</span>
+                <span class="app-tile-name">Todo</span>
+                <span class="app-tile-expand">
+                  <span class="app-tile-expand-icon"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webapp_todoBuddy/media/icon.svg);mask-image:url(https://isafuianish-dev.github.io/webapp_todoBuddy/media/icon.svg);"></span></span>
+                  <span class="app-tile-fullname">Todo Buddy</span>
+                  <span class="app-tile-desc">Track tasks across lists with due dates, priorities, and multiple views.</span>
+                  <span class="app-tile-buttons">
+                    <a class="app-tile-github" href="https://github.com/isafuianish-dev/webapp_todoBuddy" target="_blank" rel="noopener noreferrer" aria-label="View source on GitHub"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webapp_cdnBuddy/svg/github.svg);mask-image:url(https://isafuianish-dev.github.io/webapp_cdnBuddy/svg/github.svg);"></span></a>
+                    <a class="app-tile-open" href="https://isafuianish-dev.github.io/webapp_todoBuddy/" target="_blank" rel="noopener noreferrer">Open</a>
+                  </span>
+                </span>
+              </div>
+
+              <div class="app-tile">
+                <span class="app-tile-icon"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webapp_noteBuddy/media/icon.svg);mask-image:url(https://isafuianish-dev.github.io/webapp_noteBuddy/media/icon.svg);"></span></span>
+                <span class="app-tile-index">09</span>
+                <span class="app-tile-symbol">Nt</span>
+                <span class="app-tile-name">Note</span>
+                <span class="app-tile-expand">
+                  <span class="app-tile-expand-icon"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webapp_noteBuddy/media/icon.svg);mask-image:url(https://isafuianish-dev.github.io/webapp_noteBuddy/media/icon.svg);"></span></span>
+                  <span class="app-tile-fullname">Note Buddy</span>
+                  <span class="app-tile-desc">Markdown notes with a live preview, formatting toolbar, and smart autocomplete.</span>
+                  <span class="app-tile-buttons">
+                    <a class="app-tile-github" href="https://github.com/isafuianish-dev/webapp_noteBuddy" target="_blank" rel="noopener noreferrer" aria-label="View source on GitHub"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webapp_cdnBuddy/svg/github.svg);mask-image:url(https://isafuianish-dev.github.io/webapp_cdnBuddy/svg/github.svg);"></span></a>
+                    <a class="app-tile-open" href="https://isafuianish-dev.github.io/webapp_noteBuddy/" target="_blank" rel="noopener noreferrer">Open</a>
+                  </span>
+                </span>
+              </div>
+
+              <div class="app-tile">
+                <span class="app-tile-icon"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webapp_habbitBuddy/media/icon.svg);mask-image:url(https://isafuianish-dev.github.io/webapp_habbitBuddy/media/icon.svg);"></span></span>
+                <span class="app-tile-index">10</span>
+                <span class="app-tile-symbol">Hb</span>
+                <span class="app-tile-name">Habit</span>
+                <span class="app-tile-expand">
+                  <span class="app-tile-expand-icon"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webapp_habbitBuddy/media/icon.svg);mask-image:url(https://isafuianish-dev.github.io/webapp_habbitBuddy/media/icon.svg);"></span></span>
+                  <span class="app-tile-fullname">Habit Buddy</span>
+                  <span class="app-tile-desc">Track daily habits with streaks and a GitHub-style activity heatmap.</span>
+                  <span class="app-tile-buttons">
+                    <a class="app-tile-github" href="https://github.com/isafuianish-dev/webapp_habbitBuddy" target="_blank" rel="noopener noreferrer" aria-label="View source on GitHub"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webapp_cdnBuddy/svg/github.svg);mask-image:url(https://isafuianish-dev.github.io/webapp_cdnBuddy/svg/github.svg);"></span></a>
+                    <a class="app-tile-open" href="https://isafuianish-dev.github.io/webapp_habbitBuddy/" target="_blank" rel="noopener noreferrer">Open</a>
+                  </span>
+                </span>
+              </div>
+
+              <div class="app-tile">
+                <span class="app-tile-ribbon-clip" aria-hidden="true"><span class="app-tile-ribbon">New</span></span>
+                <span class="app-tile-icon"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webapp_tripPlannerBuddy/media/icon.svg);mask-image:url(https://isafuianish-dev.github.io/webapp_tripPlannerBuddy/media/icon.svg);"></span></span>
+                <span class="app-tile-index">11</span>
+                <span class="app-tile-symbol">Tp</span>
+                <span class="app-tile-name">Trip Planner</span>
+                <span class="app-tile-expand">
+                  <span class="app-tile-ribbon" aria-hidden="true">New</span>
+                  <span class="app-tile-expand-icon"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webapp_tripPlannerBuddy/media/icon.svg);mask-image:url(https://isafuianish-dev.github.io/webapp_tripPlannerBuddy/media/icon.svg);"></span></span>
+                  <span class="app-tile-fullname">Trip Planner Buddy</span>
+                  <span class="app-tile-desc">Plan hotels, packing lists, and a day-by-day itinerary for a trip.</span>
+                  <span class="app-tile-buttons">
+                    <a class="app-tile-github" href="https://github.com/isafuianish-dev/webapp_tripPlannerBuddy" target="_blank" rel="noopener noreferrer" aria-label="View source on GitHub"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webapp_cdnBuddy/svg/github.svg);mask-image:url(https://isafuianish-dev.github.io/webapp_cdnBuddy/svg/github.svg);"></span></a>
+                    <a class="app-tile-open" href="https://isafuianish-dev.github.io/webapp_tripPlannerBuddy/" target="_blank" rel="noopener noreferrer">Open</a>
+                  </span>
+                </span>
+              </div>
+
+              <div class="app-tile">
+                <span class="app-tile-ribbon-clip" aria-hidden="true"><span class="app-tile-ribbon">New</span></span>
+                <span class="app-tile-icon"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webapp_passwordBuddy/media/icon.svg);mask-image:url(https://isafuianish-dev.github.io/webapp_passwordBuddy/media/icon.svg);"></span></span>
+                <span class="app-tile-index">12</span>
+                <span class="app-tile-symbol">Pw</span>
+                <span class="app-tile-name">Password</span>
+                <span class="app-tile-expand">
+                  <span class="app-tile-ribbon" aria-hidden="true">New</span>
+                  <span class="app-tile-expand-icon"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webapp_passwordBuddy/media/icon.svg);mask-image:url(https://isafuianish-dev.github.io/webapp_passwordBuddy/media/icon.svg);"></span></span>
+                  <span class="app-tile-fullname">Password Buddy</span>
+                  <span class="app-tile-desc">Store passwords, one-time codes, and notes in an encrypted local vault.</span>
+                  <span class="app-tile-buttons">
+                    <a class="app-tile-github" href="https://github.com/isafuianish-dev/webapp_passwordBuddy" target="_blank" rel="noopener noreferrer" aria-label="View source on GitHub"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webapp_cdnBuddy/svg/github.svg);mask-image:url(https://isafuianish-dev.github.io/webapp_cdnBuddy/svg/github.svg);"></span></a>
+                    <a class="app-tile-open" href="https://isafuianish-dev.github.io/webapp_passwordBuddy/" target="_blank" rel="noopener noreferrer">Open</a>
+                  </span>
+                </span>
+              </div>
+
+              <div class="app-tile">
+                <span class="app-tile-ribbon-clip" aria-hidden="true"><span class="app-tile-ribbon">New</span></span>
+                <span class="app-tile-icon"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webapp_codecBuddy/media/icon.svg);mask-image:url(https://isafuianish-dev.github.io/webapp_codecBuddy/media/icon.svg);"></span></span>
+                <span class="app-tile-index">13</span>
+                <span class="app-tile-symbol">Cd</span>
+                <span class="app-tile-name">Codec</span>
+                <span class="app-tile-expand">
+                  <span class="app-tile-ribbon" aria-hidden="true">New</span>
+                  <span class="app-tile-expand-icon"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webapp_codecBuddy/media/icon.svg);mask-image:url(https://isafuianish-dev.github.io/webapp_codecBuddy/media/icon.svg);"></span></span>
+                  <span class="app-tile-fullname">Codec Buddy</span>
+                  <span class="app-tile-desc">Encode, decode, and inspect Base64, URL, hex, JWT, and JSON — plus regex testing and template replication.</span>
+                  <span class="app-tile-buttons">
+                    <a class="app-tile-github" href="https://github.com/isafuianish-dev/webapp_codecBuddy" target="_blank" rel="noopener noreferrer" aria-label="View source on GitHub"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webapp_cdnBuddy/svg/github.svg);mask-image:url(https://isafuianish-dev.github.io/webapp_cdnBuddy/svg/github.svg);"></span></a>
+                    <a class="app-tile-open" href="https://isafuianish-dev.github.io/webapp_codecBuddy/" target="_blank" rel="noopener noreferrer">Open</a>
+                  </span>
+                </span>
+              </div>
+
+              <div class="app-tile">
+                <span class="app-tile-icon"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webapp_mealBuddy/media/icon.svg);mask-image:url(https://isafuianish-dev.github.io/webapp_mealBuddy/media/icon.svg);"></span></span>
+                <span class="app-tile-index">14</span>
+                <span class="app-tile-symbol">Me</span>
+                <span class="app-tile-name">Meal</span>
+                <span class="app-tile-expand">
+                  <span class="app-tile-expand-icon"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webapp_mealBuddy/media/icon.svg);mask-image:url(https://isafuianish-dev.github.io/webapp_mealBuddy/media/icon.svg);"></span></span>
+                  <span class="app-tile-fullname">Meal Buddy</span>
+                  <span class="app-tile-desc">Plan a week of meals — breakfast, lunch, and dinner for each person.</span>
+                  <span class="app-tile-buttons">
+                    <a class="app-tile-github" href="https://github.com/isafuianish-dev/webapp_mealBuddy" target="_blank" rel="noopener noreferrer" aria-label="View source on GitHub"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webapp_cdnBuddy/svg/github.svg);mask-image:url(https://isafuianish-dev.github.io/webapp_cdnBuddy/svg/github.svg);"></span></a>
+                    <a class="app-tile-open" href="https://isafuianish-dev.github.io/webapp_mealBuddy/" target="_blank" rel="noopener noreferrer">Open</a>
+                  </span>
+                </span>
+              </div>
+
+              <div class="app-tile app-tile-placeholder" aria-hidden="true">
+                <span class="app-tile-index">15</span>
+                <span class="app-tile-symbol">+</span>
+                <span class="app-tile-name">More soon</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="app-group">
+            <h3 class="app-group-title">Web Games</h3>
+            <div class="app-grid">
+              <div class="app-tile">
+                <span class="app-tile-icon"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webgame_minesWeeperBuddy/media/icon.svg);mask-image:url(https://isafuianish-dev.github.io/webgame_minesWeeperBuddy/media/icon.svg);"></span></span>
+                <span class="app-tile-index">00</span>
+                <span class="app-tile-symbol">Mw</span>
+                <span class="app-tile-name">Minesweeper</span>
+                <span class="app-tile-expand">
+                  <span class="app-tile-expand-icon"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webgame_minesWeeperBuddy/media/icon.svg);mask-image:url(https://isafuianish-dev.github.io/webgame_minesWeeperBuddy/media/icon.svg);"></span></span>
+                  <span class="app-tile-fullname">Minesweeper Buddy</span>
+                  <span class="app-tile-desc">Classic minesweeper with four difficulties, a timer, and saved best times.</span>
+                  <span class="app-tile-buttons">
+                    <a class="app-tile-github" href="https://github.com/isafuianish-dev/webgame_minesWeeperBuddy" target="_blank" rel="noopener noreferrer" aria-label="View source on GitHub"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webapp_cdnBuddy/svg/github.svg);mask-image:url(https://isafuianish-dev.github.io/webapp_cdnBuddy/svg/github.svg);"></span></a>
+                    <a class="app-tile-open" href="https://isafuianish-dev.github.io/webgame_minesWeeperBuddy/" target="_blank" rel="noopener noreferrer">Open</a>
+                  </span>
+                </span>
+              </div>
+
+              <div class="app-tile">
+                <span class="app-tile-icon"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webgame_ludoBuddy/media/icon.svg);mask-image:url(https://isafuianish-dev.github.io/webgame_ludoBuddy/media/icon.svg);"></span></span>
+                <span class="app-tile-index">01</span>
+                <span class="app-tile-symbol">Lu</span>
+                <span class="app-tile-name">Ludo</span>
+                <span class="app-tile-expand">
+                  <span class="app-tile-expand-icon"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webgame_ludoBuddy/media/icon.svg);mask-image:url(https://isafuianish-dev.github.io/webgame_ludoBuddy/media/icon.svg);"></span></span>
+                  <span class="app-tile-fullname">Ludo Buddy</span>
+                  <span class="app-tile-desc">Classic 4-player Ludo with a shareable save link and a rolling 3D die.</span>
+                  <span class="app-tile-buttons">
+                    <a class="app-tile-github" href="https://github.com/isafuianish-dev/webgame_ludoBuddy" target="_blank" rel="noopener noreferrer" aria-label="View source on GitHub"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webapp_cdnBuddy/svg/github.svg);mask-image:url(https://isafuianish-dev.github.io/webapp_cdnBuddy/svg/github.svg);"></span></a>
+                    <a class="app-tile-open" href="https://isafuianish-dev.github.io/webgame_ludoBuddy/" target="_blank" rel="noopener noreferrer">Open</a>
+                  </span>
+                </span>
+              </div>
+
+              <div class="app-tile">
+                <span class="app-tile-icon"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webgame_memoryMatchBuddy/media/icon.svg);mask-image:url(https://isafuianish-dev.github.io/webgame_memoryMatchBuddy/media/icon.svg);"></span></span>
+                <span class="app-tile-index">02</span>
+                <span class="app-tile-symbol">Mm</span>
+                <span class="app-tile-name">Memory Match</span>
+                <span class="app-tile-expand">
+                  <span class="app-tile-expand-icon"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webgame_memoryMatchBuddy/media/icon.svg);mask-image:url(https://isafuianish-dev.github.io/webgame_memoryMatchBuddy/media/icon.svg);"></span></span>
+                  <span class="app-tile-fullname">Memory Match Buddy</span>
+                  <span class="app-tile-desc">Flip cards to find matching pairs, with saved best moves and times.</span>
+                  <span class="app-tile-buttons">
+                    <a class="app-tile-github" href="https://github.com/isafuianish-dev/webgame_memoryMatchBuddy" target="_blank" rel="noopener noreferrer" aria-label="View source on GitHub"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webapp_cdnBuddy/svg/github.svg);mask-image:url(https://isafuianish-dev.github.io/webapp_cdnBuddy/svg/github.svg);"></span></a>
+                    <a class="app-tile-open" href="https://isafuianish-dev.github.io/webgame_memoryMatchBuddy/" target="_blank" rel="noopener noreferrer">Open</a>
+                  </span>
+                </span>
+              </div>
+
+              <div class="app-tile">
+                <span class="app-tile-icon"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webgame_sudokuBuddy/media/icon.svg);mask-image:url(https://isafuianish-dev.github.io/webgame_sudokuBuddy/media/icon.svg);"></span></span>
+                <span class="app-tile-index">03</span>
+                <span class="app-tile-symbol">Su</span>
+                <span class="app-tile-name">Sudoku</span>
+                <span class="app-tile-expand">
+                  <span class="app-tile-expand-icon"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webgame_sudokuBuddy/media/icon.svg);mask-image:url(https://isafuianish-dev.github.io/webgame_sudokuBuddy/media/icon.svg);"></span></span>
+                  <span class="app-tile-fullname">Sudoku Buddy</span>
+                  <span class="app-tile-desc">Classic Sudoku with notes, mistake tracking, and a shareable save link.</span>
+                  <span class="app-tile-buttons">
+                    <a class="app-tile-github" href="https://github.com/isafuianish-dev/webgame_sudokuBuddy" target="_blank" rel="noopener noreferrer" aria-label="View source on GitHub"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webapp_cdnBuddy/svg/github.svg);mask-image:url(https://isafuianish-dev.github.io/webapp_cdnBuddy/svg/github.svg);"></span></a>
+                    <a class="app-tile-open" href="https://isafuianish-dev.github.io/webgame_sudokuBuddy/" target="_blank" rel="noopener noreferrer">Open</a>
+                  </span>
+                </span>
+              </div>
+
+              <div class="app-tile">
+                <span class="app-tile-ribbon-clip" aria-hidden="true"><span class="app-tile-ribbon">New</span></span>
+                <span class="app-tile-icon"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webgame_snakeBuddy/media/icon.svg);mask-image:url(https://isafuianish-dev.github.io/webgame_snakeBuddy/media/icon.svg);"></span></span>
+                <span class="app-tile-index">04</span>
+                <span class="app-tile-symbol">Sk</span>
+                <span class="app-tile-name">Snake</span>
+                <span class="app-tile-expand">
+                  <span class="app-tile-ribbon" aria-hidden="true">New</span>
+                  <span class="app-tile-expand-icon"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webgame_snakeBuddy/media/icon.svg);mask-image:url(https://isafuianish-dev.github.io/webgame_snakeBuddy/media/icon.svg);"></span></span>
+                  <span class="app-tile-fullname">Snake Buddy</span>
+                  <span class="app-tile-desc">Retro grid-based snake with four difficulties, speed-ups, and saved best scores.</span>
+                  <span class="app-tile-buttons">
+                    <a class="app-tile-github" href="https://github.com/isafuianish-dev/webgame_snakeBuddy" target="_blank" rel="noopener noreferrer" aria-label="View source on GitHub"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webapp_cdnBuddy/svg/github.svg);mask-image:url(https://isafuianish-dev.github.io/webapp_cdnBuddy/svg/github.svg);"></span></a>
+                    <a class="app-tile-open" href="https://isafuianish-dev.github.io/webgame_snakeBuddy/" target="_blank" rel="noopener noreferrer">Open</a>
+                  </span>
+                </span>
+              </div>
+
+              <div class="app-tile">
+                <span class="app-tile-ribbon-clip" aria-hidden="true">
+                  <span class="app-tile-ribbon app-tile-ribbon-cycle is-new" data-ribbon-states="New,Beta">New</span>
+                </span>
+                <span class="app-tile-icon"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webgame_trainMasterBuddy/media/icon.svg);mask-image:url(https://isafuianish-dev.github.io/webgame_trainMasterBuddy/media/icon.svg);"></span></span>
+                <span class="app-tile-index">05</span>
+                <span class="app-tile-symbol">Tm</span>
+                <span class="app-tile-name">Train Master</span>
+                <span class="app-tile-expand">
+                  <span class="app-tile-ribbon app-tile-ribbon-cycle is-new" data-ribbon-states="New,Beta" aria-hidden="true">New</span>
+                  <span class="app-tile-expand-icon"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webgame_trainMasterBuddy/media/icon.svg);mask-image:url(https://isafuianish-dev.github.io/webgame_trainMasterBuddy/media/icon.svg);"></span></span>
+                  <span class="app-tile-fullname">Train Master Buddy</span>
+                  <span class="app-tile-desc">Flip junction levers to route trains to their matching stations on a random map.</span>
+                  <span class="app-tile-buttons">
+                    <a class="app-tile-github" href="https://github.com/isafuianish-dev/webgame_trainMasterBuddy" target="_blank" rel="noopener noreferrer" aria-label="View source on GitHub"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webapp_cdnBuddy/svg/github.svg);mask-image:url(https://isafuianish-dev.github.io/webapp_cdnBuddy/svg/github.svg);"></span></a>
+                    <a class="app-tile-open" href="https://isafuianish-dev.github.io/webgame_trainMasterBuddy/" target="_blank" rel="noopener noreferrer">Open</a>
+                  </span>
+                </span>
+              </div>
+
+              <div class="app-tile app-tile-placeholder" aria-hidden="true">
+                <span class="app-tile-index">06</span>
+                <span class="app-tile-symbol">+</span>
+                <span class="app-tile-name">More soon</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="app-group">
+            <h3 class="app-group-title">VS Code Extensions</h3>
+            <div class="app-grid">
+              <div class="app-tile">
+                <span class="app-tile-ribbon-clip" aria-hidden="true">
+                  <span class="app-tile-ribbon app-tile-ribbon-cycle is-new" data-ribbon-states="New,Beta">New</span>
+                </span>
+                <span class="app-tile-icon"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/vsix_BuilderBuddy/media/icon.svg);mask-image:url(https://isafuianish-dev.github.io/vsix_BuilderBuddy/media/icon.svg);"></span></span>
+                <span class="app-tile-index">00</span>
+                <span class="app-tile-symbol">Bb</span>
+                <span class="app-tile-name">Builder</span>
+                <span class="app-tile-expand">
+                  <span class="app-tile-ribbon app-tile-ribbon-cycle is-new" data-ribbon-states="New,Beta" aria-hidden="true">New</span>
+                  <span class="app-tile-expand-icon"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/vsix_BuilderBuddy/media/icon.svg);mask-image:url(https://isafuianish-dev.github.io/vsix_BuilderBuddy/media/icon.svg);"></span></span>
+                  <span class="app-tile-fullname">Builder Buddy</span>
+                  <span class="app-tile-desc">Automated build system for project_buddy (private)</span>
+                  <span class="app-tile-buttons">
+                    <a class="app-tile-github" href="https://github.com/isafuianish-dev/vsix_BuilderBuddy" target="_blank" rel="noopener noreferrer" aria-label="View source on GitHub"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webapp_cdnBuddy/svg/github.svg);mask-image:url(https://isafuianish-dev.github.io/webapp_cdnBuddy/svg/github.svg);"></span></a>
+                    <a class="app-tile-open" href="https://raw.githubusercontent.com/isafuianish-dev/vsix_BuilderBuddy/master/build/builder-buddy.vsix" download="builder-buddy.vsix">Download</a>
+                  </span>
+                </span>
+              </div>
+
+              <div class="app-tile">
+                <span class="app-tile-ribbon-clip" aria-hidden="true"><span class="app-tile-ribbon">New</span></span>
+                <span class="app-tile-icon"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/vsix_todoBuddy/media/icon.svg);mask-image:url(https://isafuianish-dev.github.io/vsix_todoBuddy/media/icon.svg);"></span></span>
+                <span class="app-tile-index">01</span>
+                <span class="app-tile-symbol">Tb</span>
+                <span class="app-tile-name">Todo</span>
+                <span class="app-tile-expand">
+                  <span class="app-tile-ribbon" aria-hidden="true">New</span>
+                  <span class="app-tile-expand-icon"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/vsix_todoBuddy/media/icon.svg);mask-image:url(https://isafuianish-dev.github.io/vsix_todoBuddy/media/icon.svg);"></span></span>
+                  <span class="app-tile-fullname">Todo Buddy</span>
+                  <span class="app-tile-desc">A to-do list in the sidebar that stays put across VS Code restarts.</span>
+                  <span class="app-tile-buttons">
+                    <a class="app-tile-github" href="https://github.com/isafuianish-dev/vsix_todoBuddy" target="_blank" rel="noopener noreferrer" aria-label="View source on GitHub"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webapp_cdnBuddy/svg/github.svg);mask-image:url(https://isafuianish-dev.github.io/webapp_cdnBuddy/svg/github.svg);"></span></a>
+                    <a class="app-tile-open" href="https://raw.githubusercontent.com/isafuianish-dev/vsix_todoBuddy/master/build/todo-buddy.vsix" download="todo-buddy.vsix">Download</a>
+                  </span>
+                </span>
+              </div>
+
+              <div class="app-tile">
+                <span class="app-tile-icon"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/vsix_claudeStatBuddy/media/icon.svg);mask-image:url(https://isafuianish-dev.github.io/vsix_claudeStatBuddy/media/icon.svg);"></span></span>
+                <span class="app-tile-index">02</span>
+                <span class="app-tile-symbol">Cs</span>
+                <span class="app-tile-name">Claude Stat</span>
+                <span class="app-tile-expand">
+                  <span class="app-tile-expand-icon"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/vsix_claudeStatBuddy/media/icon.svg);mask-image:url(https://isafuianish-dev.github.io/vsix_claudeStatBuddy/media/icon.svg);"></span></span>
+                  <span class="app-tile-fullname">Claude Stat Buddy</span>
+                  <span class="app-tile-desc">Shows Claude Code context usage and today's token spend in the status bar.</span>
+                  <span class="app-tile-buttons">
+                    <a class="app-tile-github" href="https://github.com/isafuianish-dev/vsix_claudeStatBuddy" target="_blank" rel="noopener noreferrer" aria-label="View source on GitHub"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webapp_cdnBuddy/svg/github.svg);mask-image:url(https://isafuianish-dev.github.io/webapp_cdnBuddy/svg/github.svg);"></span></a>
+                    <a class="app-tile-open" href="https://raw.githubusercontent.com/isafuianish-dev/vsix_claudeStatBuddy/master/build/claude-stat-buddy.vsix" download="claude-stat-buddy.vsix">Download</a>
+                  </span>
+                </span>
+              </div>
+
+              <div class="app-tile">
+                <span class="app-tile-icon"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/vsix_gitBuddy/media/icon.svg);mask-image:url(https://isafuianish-dev.github.io/vsix_gitBuddy/media/icon.svg);"></span></span>
+                <span class="app-tile-index">03</span>
+                <span class="app-tile-symbol">Gb</span>
+                <span class="app-tile-name">Git</span>
+                <span class="app-tile-expand">
+                  <span class="app-tile-expand-icon"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/vsix_gitBuddy/media/icon.svg);mask-image:url(https://isafuianish-dev.github.io/vsix_gitBuddy/media/icon.svg);"></span></span>
+                  <span class="app-tile-fullname">Git Buddy</span>
+                  <span class="app-tile-desc">Branch, stage, commit, stash, and manage pull requests without leaving VS Code.</span>
+                  <span class="app-tile-buttons">
+                    <a class="app-tile-github" href="https://github.com/isafuianish-dev/vsix_gitBuddy" target="_blank" rel="noopener noreferrer" aria-label="View source on GitHub"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webapp_cdnBuddy/svg/github.svg);mask-image:url(https://isafuianish-dev.github.io/webapp_cdnBuddy/svg/github.svg);"></span></a>
+                    <a class="app-tile-open" href="https://raw.githubusercontent.com/isafuianish-dev/vsix_gitBuddy/master/build/git-buddy.vsix" download="git-buddy.vsix">Download</a>
+                  </span>
+                </span>
+              </div>
+
+              <div class="app-tile">
+                <span class="app-tile-icon"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/vsix_liveServerBuddy/media/icon.svg);mask-image:url(https://isafuianish-dev.github.io/vsix_liveServerBuddy/media/icon.svg);"></span></span>
+                <span class="app-tile-index">04</span>
+                <span class="app-tile-symbol">Ls</span>
+                <span class="app-tile-name">Live Server</span>
+                <span class="app-tile-expand">
+                  <span class="app-tile-expand-icon"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/vsix_liveServerBuddy/media/icon.svg);mask-image:url(https://isafuianish-dev.github.io/vsix_liveServerBuddy/media/icon.svg);"></span></span>
+                  <span class="app-tile-fullname">Live Server Buddy</span>
+                  <span class="app-tile-desc">Serves your workspace locally and auto-reloads the browser whenever a file changes.</span>
+                  <span class="app-tile-buttons">
+                    <a class="app-tile-github" href="https://github.com/isafuianish-dev/vsix_liveServerBuddy" target="_blank" rel="noopener noreferrer" aria-label="View source on GitHub"><span class="icon" style="-webkit-mask-image:url(https://isafuianish-dev.github.io/webapp_cdnBuddy/svg/github.svg);mask-image:url(https://isafuianish-dev.github.io/webapp_cdnBuddy/svg/github.svg);"></span></a>
+                    <a class="app-tile-open" href="https://raw.githubusercontent.com/isafuianish-dev/vsix_liveServerBuddy/master/build/live-server-buddy.vsix" download="live-server-buddy.vsix">Download</a>
+                  </span>
+                </span>
+              </div>
+
+              <div class="app-tile app-tile-placeholder" aria-hidden="true">
+                <span class="app-tile-index">05</span>
+                <span class="app-tile-symbol">+</span>
+                <span class="app-tile-name">More soon</span>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="education">
+      <div class="wrap">
+        <h2 class="section-title reveal"><span class="section-num">05</span>Education &amp; Certifications</h2>
+
+        <div class="edu-grid">
+          <div class="edu-card reveal">
+            <h3>B.Tech — Computer Science &amp; Engineering</h3>
+            <p>West Bengal University of Technology<br>Jalpaiguri Government Engineering College · 2012</p>
+          </div>
+        </div>
+
+        <h3 class="sub-title reveal">Certifications</h3>
+        <ul class="tag-list reveal">
+          <li>AWS Certified AI Practitioner</li>
+          <li>AWS Certified Developer — Associate</li>
+          <li>IBM Generative &amp; Agentic AI Foundation</li>
+          <li>PCAP — Certified Associate Python Programmer</li>
+          <li>IBM DB2 10.1 Fundamentals</li>
+        </ul>
+        <a class="btn btn-ghost certs-more-link reveal" href="https://www.credly.com/users/isafuianish-dev/badges/credly" target="_blank" rel="noopener noreferrer">Read more</a>
+
+        <h3 class="sub-title reveal">IBM Internal Certifications</h3>
+        <ul class="tag-list reveal">
+          <li>Insurance Insights &amp; Solutions</li>
+          <li>IBM Automation Practitioner</li>
+          <li>Data Science Foundations Level 1</li>
+          <li>Cognitive Practitioner</li>
+          <li>Data Science Tools</li>
+          <li>Enterprise Design Thinking Practitioner</li>
+          <li>Python for Data Science</li>
+          <li>Watson Knowledge Studio Methodology</li>
+          <li>IBM Automation: Compass</li>
+          <li>Watson and Cloud Foundations</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="contact">
+      <div class="wrap">
+        <h2 class="section-title reveal"><span class="section-num">06</span>Contact</h2>
+        <p class="section-lede reveal">Open to conversations about enterprise architecture, platform modernization, or AI-augmented engineering.</p>
+        <div class="contact-grid">
+          <a class="contact-card reveal" href="mailto:isafuianish.dev@outlook.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3.5 6 8.5 7 8.5-7"/></svg>
+            <div>
+              <span class="contact-label">Email</span>
+              <span class="contact-value">isafuianish.dev@outlook.com</span>
+            </div>
+          </a>
+          <a class="contact-card reveal" href="https://github.com/isafuianish-dev" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.73.5.75 5.48.75 11.75c0 5.02 3.26 9.28 7.78 10.78.57.1.78-.25.78-.55 0-.27-.01-1.17-.02-2.12-3.17.69-3.84-1.35-3.84-1.35-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.24.72-1.53-2.53-.29-5.19-1.27-5.19-5.64 0-1.25.44-2.27 1.18-3.07-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.24 2.76.12 3.05.74.8 1.18 1.82 1.18 3.07 0 4.38-2.67 5.34-5.21 5.63.41.36.77 1.06.77 2.14 0 1.55-.01 2.79-.01 3.17 0 .3.2.66.79.55A11.26 11.26 0 0 0 23.25 11.75C23.25 5.48 18.27.5 12 .5Z"/></svg>
+            <div>
+              <span class="contact-label">GitHub</span>
+              <span class="contact-value">isafuianish-dev</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>© <span id="year"></span> Anish Safui · Edison, NJ</p>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+</body>
+</html>
